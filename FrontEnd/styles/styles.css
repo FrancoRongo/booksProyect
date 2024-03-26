@@ -1,6 +1,6 @@
 /* Estilos generales */
 body {
-    background-image: url('../imagenes/Fondo-body2.avif');
+    background-image: url('../imagenes/Hi-Tech_Digital_Background_0062.mp4');
     background-color: rgba(255, 255, 255, 0.7);
     background-repeat: no-repeat;
     background-size: cover;
@@ -18,16 +18,18 @@ body {
 .logo {
     width: 100px; 
     height: 100px;
+    margin-right: 1px;
 }
 
 h1 {
-    display: inline-block; /* Permite alinear elementos de manera horizontal */
-    vertical-align: middle; /* Alinea verticalmente el título con el logo */
-    margin: 5px; /* Añade márgenes alrededor del título */
-    font-size: 30px; /* Tamaño de fuente del título */
-    margin-bottom: 30px; /* Margen inferior del título */
+    display: inline-block; 
+    vertical-align: middle; 
+    margin: 30px; 
+    font-size: 30px;
+    margin-bottom: 30px; 
+    margin-left: 1px;
+    
 }
-
 
 nav ul {
     list-style-type: none;
@@ -56,17 +58,34 @@ footer {
     background-color: #4d4d4d;
     color: #fff;
     text-align: center;
-    padding: 10px 0;
+    padding: 5px;
 }
 
-
+.body-historia{
+    background-image: url('../imagenes/Historia\ Libro-fondo.webp');
+    
+}
+.body-bibliotecas{
+    background-image: url('../imagenes/Fondo-bibliotecas.jpeg');
+}
+.body-agregar{
+    background-image: url('../imagenes/desktop-wallpaper-book-page-old-book-pages.webp');
+}
 
 header.encabezado {
-    background-image: url('../imagenes/banner-abstracto-diseno-ondas-que-fluyen_1048-18226.jpg.avif');
+    background-image: url('../imagenes/fondo-azul-degradado-lujo-abstracto-azul-oscuro-liso-banner-estudio-vineta-negra_1258-82761.jpg.webp');
     background-size: cover; 
     background-position: center; 
     background-repeat: no-repeat; 
     padding: 20px; 
     text-align: center; 
     color: #fff; 
+}
+
+.image-card-size{
+    max-width: 30%;
+    height: auto;
+    display: inline-block;
+    vertical-align: middle;
+    margin: 10px;
 }
