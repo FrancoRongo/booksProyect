@@ -1,45 +1,27 @@
+const bookCardsContainer = document.getElementById("bookCards");
+const showBooks = (data) => {
+  data.forEach(book => {
+    renderBook(book);
+  });
+}
 function renderBook(bookData) {
-    const bookCardsContainer = document.getElementById("bookCards");
 
-    const card = document.createElement("div");
-    card.classList.add("card", "mb-3", "shadow","image-card-size");
+  const bookElement = document.createElement("article");
+  const containerBook = document.createElement("div");
+  containerBook.classList.add("card", "mb-3", "shadow","card-size")
+  containerBook.innerHTML=` 
+   <img src= " ${bookData.poster}" class="card-img-top" alt="${bookData.title}">
+   <div class="card-body"> 
+   <h5 class= "card-title">${bookData.title}</h5>
+   <p class= "card-text"><strong>Author:</strong>${bookData.author}</p>
+   <p class= "card-text"><strong>Year:</strong>${bookData.year}</p>
+   <p class= "card-text"><strong>Gender:</strong>${bookData.genre}</p>
+   <p class= "card-text"><strong>Editorial:</strong>${bookData.editorial}</p>
+   </div>
+  `
 
-    const img = document.createElement("img");
-    img.src = bookData.poster;
-    img.classList.add("card-img-top");
-    card.appendChild(img);
-
-    const cardBody = document.createElement("div");
-    cardBody.classList.add("card-body");
-
-    const title = document.createElement("h5");
-    title.classList.add("card-title");
-    title.textContent = bookData.title;
-    cardBody.appendChild(title);
-
-    const author = document.createElement("p");
-    author.classList.add("card-text");
-    author.textContent = "Autor: " + bookData.author;
-    cardBody.appendChild(author);
-
-    const year = document.createElement("p");
-    year.classList.add("card-text");
-    year.textContent = "Año: " + bookData.year;
-    cardBody.appendChild(year);
-
-    const genre = document.createElement("p");
-    genre.classList.add("card-text");
-    genre.textContent = "Género: " + bookData.genre.join(", ");
-    cardBody.appendChild(genre);
-
-    const editorial = document.createElement("p");
-    editorial.classList.add("card-text");
-    editorial.textContent = "Editorial: " + bookData.editorial;
-    cardBody.appendChild(editorial);
-
-    card.appendChild(cardBody);
-
-    bookCardsContainer.appendChild(card);
+    bookCardsContainer.appendChild(bookElement);
+    bookElement.appendChild(containerBook);
   }
 
-  module.exports=renderBook
+  module.exports=showBooks;
