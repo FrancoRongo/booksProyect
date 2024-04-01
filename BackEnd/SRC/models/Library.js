@@ -1,11 +1,11 @@
-const {Schema, model}= require ("express");
+const { Schema, model } = require("mongoose");
 
 const librarySchema = new Schema ({
-    nombre: {type: String, require:true},
-    direccion: {type: String, require:true},
-    telefono: {type: Number, require:true},
-    horario: {type: Number, require:true},
-    servicios: {type: Array, require:true},
+    nombre: {type: String, required:true},
+    direccion: {type: String, required:true},
+    telefono: {type: Number, required:true},
+    horario: {type: Number, required:true},
+    servicios: {type: Array, required:true},
 })
 
 const Library = model("Library", librarySchema);

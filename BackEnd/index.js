@@ -2,7 +2,7 @@ const {app, PORT} = require("./SRC/server");
 const dbConnection = require ("./SRC/config/dbConnection.js");
 
 dbConnection ()
-.them(()=>{
+.then(()=>{
     app.listen(PORT, ()=>{
         console.log(`servidor express iniciado en el puerto ${PORT}`)
     });

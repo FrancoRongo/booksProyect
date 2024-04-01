@@ -1,9 +1,9 @@
 const Router = require ("express");
-const booksroutes = ("./booksRoutes.js");
-const libraryroutes = ("./libraryRoutes.js");
+const booksroutes = require ("./booksRoutes.js");
+const libraryroutes = require ("./libraryRoutes.js");
 const router = Router();
 
-router.use ("/books", booksroutes);
-router.use ("/libray",libraryroutes);
+router.use("/books", booksroutes);
+router.use("/library",libraryroutes);
 
-module.exports=router;
+module.exports= router;
